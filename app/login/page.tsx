@@ -1,0 +1,19 @@
+import { redirect } from "next/navigation";
+import {getSession, login} from '../lib'
+
+export default async function Login() {
+  const session = await getSession();
+  return (
+    <section>
+      <form action={async (formdata)=>{
+        'use server'
+        await login(formdata)
+        redirect('/profile')
+      }}>
+        <input type="email" name="email" id="email" />
+        <input type="password" name="password" id="password" />
+        <button type="submit">Login</button>
+      </form>
+    </section>
+  )
+}
