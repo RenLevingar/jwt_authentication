@@ -1,7 +1,6 @@
 "use server"
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
-import dotenv from "dotenv"
 import { NextRequest, NextResponse } from "next/server";
 
 //make your secret
