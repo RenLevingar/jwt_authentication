@@ -4,6 +4,7 @@ import {getSession, logout} from '../lib'
 export default async function Profile() {
   const session = await getSession();
   let user = session?.user
+  if(!user){redirect('/')}
   return (
     <section>
       <h1>Hello {user.name}</h1>
