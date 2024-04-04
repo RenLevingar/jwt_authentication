@@ -13,8 +13,8 @@ export default function Login() {
       }}>
         <main className="loginMain">
           <h1>Login</h1>
-          <input type="email" name="email" id="email" />
-          <input type="password" name="password" id="password" />
+          <input type="email" name="email" id="email"/>
+          <input type="password" name="password" id="password"/>
           <button type="submit">Login</button>
         </main>
       </form>
