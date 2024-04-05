@@ -1,15 +1,16 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import {getSession} from '../lib'
+import Header from '../components/header'
 
 export default async function Home() {
   const session = await getSession();
   let user = session?.user
   if(!user){redirect('/')}
   return (
-    <section>
-      <h1>Welcome To The Site</h1>
-      <Link href={"/profile"}>Profile</Link>
+    <section className="homeSection">
+      <Header/>
+      <h1 className="homeTitle">Welcome To The Site</h1>
     </section>
   )
 }
